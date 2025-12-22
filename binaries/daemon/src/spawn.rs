@@ -224,6 +224,7 @@ impl Spawner {
                             let mut cmd = tokio::process::Command::new("uv");
                             cmd.arg("run");
                             cmd.arg("python");
+                            cmd.arg("--no-project");
                             tracing::info!(
                                 "spawning: uv run python -uc import dora; dora.start_runtime() # {}",
                                 node.id
@@ -710,6 +711,7 @@ async fn path_spawn_command(
                         let mut cmd = tokio::process::Command::new("uv");
                         cmd.arg("run");
                         cmd.arg("python");
+                        cmd.arg("--no-project");
                         logger
                             .log(
                                 LogLevel::Info,
@@ -740,6 +742,7 @@ async fn path_spawn_command(
                     if uv {
                         let mut cmd = tokio::process::Command::new("uv");
                         cmd.arg("run");
+                        cmd.arg("--no-project");
                         cmd.arg(&resolved_path);
                         cmd
                     } else {

@@ -3,7 +3,7 @@ requires = ["maturin>=0.13.2"]
 build-backend = "maturin"
 
 [project]
-name = "dora-rs"
+name = "dora-rs-robodriver"
 dynamic = ["version"]
 # Install pyarrow at the same time of dora-rs
 requires-python = ">=3.7"
